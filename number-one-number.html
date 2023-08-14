@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600&family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600&family=Montserrat:wght@400;700;800&family=Open+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="general.css">
+  <link rel="stylesheet" href="training.css">
+  <link rel="stylesheet" href="tutorial.css">
+  <link rel="stylesheet" href="startTimer.css">
+  <link rel="stylesheet" href="gameLevel.css">
+  <link rel="stylesheet" href="result.css">
+  <title>Найди число</title>
+</head>
+<body>
+  <div class="game-container">
+
+    <!-- Training -->
+    <div class="training_container">
+      <div class="training-header">
+        <h3>Найди число</h3>
+        <p>Тренажер на внимание</p>
+      </div>
+      <div class="training-main">
+        <div class="training-main_direction">
+          <h4>Тренирует:</h4>
+          <ul class="list-item">
+            <li class="list-item_li">
+              <div class="list-item_title">Произвольное внимание</div>
+              <div class="list-item_description">Научитесь концентрировать внимание только на важном</div>
+            </li>
+            <li class="list-item_li">
+              <div class="list-item_title">Концентрацию и переклчение внимания</div>
+              <div class="list-item_description">Позволит не упускать из виду важные детали</div>
+            </li>
+            <li class="list-item_li">
+              <div class="list-item_title">Зрительное восприятие</div>
+              <div class="list-item_description">Сможете быстро находить основные мысли в текстах</div>
+            </li>
+          </ul>
+        </div>
+        <div class="training-main_button-con">
+          <button class="btn_end-training" onclick="game.startTutorial()">ДАЛЕЕ</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tutorial -->
+    <div class="tutorial_container game-container_container" onclick="game.endTutorial()">
+      <div class="tutorial_task">
+        <p>Найдите указанное число:</p>
+        <span class="game-btn_item-inner">75</span>
+      </div>
+      <div class="tutorial_numbers">
+        <div class="game-btn_line">
+          <button class="game-btn_item" style="background-color: #f28e37;">
+            <span class="game-btn_item-inner">75</span>
+            <div class="game-btn_item_arm"></div>
+          </button>
+          <button class="game-btn_item game-btn_disabled" style="background-color: #fc73b0;"><span class="game-btn_item-inner">1</span></button>
+          <button class="game-btn_item game-btn_disabled" style="background-color: #8e3dcb;"><span class="game-btn_item-inner">35</span></button>
+        </div>
+        <div class="game-btn_line">
+          <button class="game-btn_item game-btn_disabled" style="background-color: #94c94d;"><span class="game-btn_item-inner">1</span></button>
+          <button class="game-btn_item game-btn_disabled" style="background-color: #94c94d;"><span class="game-btn_item-inner">885</span></button>
+          <button class="game-btn_item game-btn_disabled" style="background-color: #4db8ec;"><span class="game-btn_item-inner">40</span></button>
+        </div>
+      </div>
+      <div class="tutorial_text-press">
+        <p>Нажмите на экран,</p>
+        <p>чтобы продолжить</p>
+      </div>
+    </div>
+
+    <!-- Timer start -->
+    <div class="start-game-timer_container game-container_container">
+      <span class="timer-text">Приготовьтесь...</span>
+      <div class="timer-counter">3</div>
+    </div>
+
+    <!-- Game -->
+    <div class="game-level_container game-container_container">
+      <div class="game-top-menu">
+        <div class="timer-game game-top-menu_item">
+          <span>ВРЕМЯ</span>
+          <span>00:00</span>
+        </div>
+        <div class="level-label game-top-menu_item">
+          <span>УРОВЕНЬ</span>
+          <span>1-9</span>
+        </div>
+        <div class="level-points game-top-menu_item">
+          <span>ОЧКИ</span>
+          <span>0</span>
+        </div>
+        <div class="level-points-bonus game-top-menu_item">
+          <span>БОНУС</span>
+          <div class="level-points-bonus_value-container">
+            <span class="lavel-points-bonus_point"></span>
+            <span class="lavel-points-bonus_point"></span>
+            <span class="lavel-points-bonus_point"></span>
+            <span class="lavel-points-bonus_point"></span>
+            <span class="lavel-points-bonus_point"></span>
+            <span>х1</span>
+          </div>
+        </div>
+      </div>
+      <div class="answer-result">
+        <div class="answer-result__wrong-result animate-quick_rotate"></div>
+        <div class="answer-result__true-result animate-heart-beat"></div>
+      </div>
+      <div class="tutorial_task">
+        <p>Найдите указанное число:</p>
+        <span class="game-btn_item-inner"></span>
+      </div>
+      <div class="tutorial_numbers">
+        <button class="game-btn_item"><span class="game-btn_item-inner"></span></button>
+        <button class="game-btn_item"><span class="game-btn_item-inner"></span></button>
+        <button class="game-btn_item"><span class="game-btn_item-inner"></span></button>
+        <button class="game-btn_item"><span class="game-btn_item-inner"></span></button>
+        <button class="game-btn_item"><span class="game-btn_item-inner"></span></button>
+        <button class="game-btn_item"><span class="game-btn_item-inner"></span></button>
+      </div>
+    </div>
+
+    <div class="results" style="display: none;">
+      <div class="training-header">
+        <h3>Ваши результаты</h3>
+      </div>
+
+      <div class="results__about">
+        <div class="result__text-wrapper">
+          <span class="result__title">Текущий результат</span>
+          <span id="current-result" class="result__value"></span>
+        </div>
+        <div class="result__text-wrapper">
+          <span class="result__title">Верных ответов</span>
+          <span id="true-answer" class="result__value"></span>
+        </div>
+        <div class="result__text-wrapper">
+          <span class="result__title">Точность ответов</span>
+          <span id="accuracy-answer" class="result__value"></span>
+        </div>
+      </div>
+      <div class="training-main_button-con">
+        <button class="btn_end-training" style="margin-top: 160px;" onclick="game.startAgain()">Ещё раз</button>
+      </div>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>

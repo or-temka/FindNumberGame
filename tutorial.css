@@ -1,0 +1,58 @@
+/* TUTORIAL ------------------------------------------- */
+
+.tutorial_container {
+  background-color: rgb(77, 184, 236);
+  cursor: pointer;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tutorial_task {
+  background-color: rgb(77, 184, 236);
+  box-shadow: 0 7px 35px 0 rgba(0,0,0,.3);
+  width: 446px;
+  padding: 24px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.tutorial_numbers {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 485px;
+  height: 206px;
+}
+
+.tutorial_task p {
+  font-family: 'Open Sans', Arial;
+  font-size: 1.15em;
+  font-weight: 600;
+}
+
+.tutorial_task span {
+  font-size: 3.15em;
+  line-height: 1;
+}
+
+.game-btn_item_arm {
+  width: 96px;
+  height: 103px;
+  background: url(img/c1e150a636718d0405f598b86b7e06f2.svg) no-repeat;
+  position: absolute;
+  z-index: 1;
+  transform: translate(17px, -20px);
+}
+
+.tutorial_text-press {
+  margin-bottom: 30px;
+}
+
+.tutorial_text-press p {
+  font-family: 'Open Sans','Helvetica Neue',Helvetica,Roboto,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+}
