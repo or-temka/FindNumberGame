@@ -1,2 +1,0 @@
-# FindNumberGame
-game for job
